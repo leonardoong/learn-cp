@@ -20,7 +20,7 @@ func findMin(nums []int) int {
 			min = nums[m]
 		}
 
-		if nums[r] < nums[l] && nums[m] > nums[r] {
+		if nums[m] >= nums[l] {
 			l = m + 1
 		} else {
 			r = m - 1
