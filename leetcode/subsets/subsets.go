@@ -17,11 +17,8 @@ func subsets(nums []int) [][]int {
 		for j := 0; j < length; j++ {
 			item := queue[j]
 
-			tmp := make([]int, len(item))
-			copy(tmp, item)
-			tmp = append(tmp, nums[i])
-
-			queue = append(queue, tmp)
+			item = append(item, nums[i])
+			queue = append(queue, item)
 		}
 	}
 
