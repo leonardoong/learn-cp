@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(subsets([]int{9, 0, 3, 5, 7}))
+	fmt.Println(subsets([]int{1, 2, 3}))
 }
 
 func subsets(nums []int) [][]int {
@@ -18,8 +18,9 @@ func subsets(nums []int) [][]int {
 
 			tmp := make([]int, len(item))
 			copy(tmp, item)
-			item = append(item, nums[i])
-			queue = append(queue, item)
+			tmp = append(tmp, nums[i])
+			queue = append(queue, tmp)
+
 		}
 	}
 
