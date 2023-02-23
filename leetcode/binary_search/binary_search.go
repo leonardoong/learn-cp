@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 func main() {
@@ -13,10 +12,6 @@ func main() {
 
 func search(nums []int, target int) int {
 	idx := -1
-
-	sort.Slice(nums, func(i, j int) bool {
-		return nums[i] < nums[j]
-	})
 
 	// binary search
 	i := 0
